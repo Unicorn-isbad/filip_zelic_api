@@ -68,7 +68,7 @@ namespace Ispit.API.Controllers
         {
             try
             {
-                if (!ModelState.IsValid && id != update_list.Id)
+                if (!ModelState.IsValid || id != update_list.Id)
                 {
                     throw new BadHttpRequestException("Check list properties");
                 }
